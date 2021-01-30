@@ -2,18 +2,14 @@ import React, { useState } from "react";
 import "./style.css";
 
 function AddBtn(props) {
-  const [bookStatus, setBookStatus] = useState("Add to Library");
-
-  function updateStatus() {
-    setBookStatus("Added to Library");
-  }
+  const [bookState, setbookState] = useState("Add to Library");
 
   return (
-    <span className="add-btn" {...props}
+    <span className="add-btn"
       role="button"
       tabIndex="0"
-      onClick={updateStatus}>
-      {bookStatus}
+      onClick={props.onClick}>
+      {bookState}
     </span>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ViewBtn from "../components/ViewBtn";
 import AddBtn from "../components/AddBtn";
 import API from "../utils/API";
@@ -38,7 +38,7 @@ function SearchBooks() {
     function addBook(book) {
         API.saveBook(book)
             .then(res => {
-                //
+
             }
             )
             .catch(err => console.log(err));
